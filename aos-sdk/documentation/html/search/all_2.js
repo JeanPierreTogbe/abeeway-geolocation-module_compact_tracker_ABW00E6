@@ -1,7 +1,6 @@
 var searchData=
 [
   ['common_20definitions',['Common definitions',['../group__aos__common.html',1,'']]],
-  ['command_20line_20interface_20service_20_28cli_29',['Command Line Interface service (CLI)',['../group__aos__dis.html',1,'']]],
   ['calibrated_5ftx_5fpower',['calibrated_tx_power',['../structsrv__ble__beaconing__param__t.html#a58faa1ac6e3894a76f3661eda694f296',1,'srv_ble_beaconing_param_t']]],
   ['cbarg',['cbarg',['../structaos__gnss__configuration__t.html#a97900ee05851c8ba27130a6c5d78e6cb',1,'aos_gnss_configuration_t']]],
   ['cbfn',['cbfn',['../structaos__gnss__configuration__t.html#a801d66ca49885a0ae802ac3c009d090e',1,'aos_gnss_configuration_t']]],
@@ -32,8 +31,6 @@ var searchData=
   ['cfg_5fconsole_5fmenu',['CFG_CONSOLE_MENU',['../group__app__conf.html#ga98343c75dd3eb41198788d488c15c38b',1,'app_conf.h']]],
   ['cfg_5fdebug_5fapp_5ftrace',['CFG_DEBUG_APP_TRACE',['../group__app__conf.html#gada9b994724bfc406f4b3881e6a96da2d',1,'app_conf.h']]],
   ['cfg_5fdebug_5fble_5ftrace',['CFG_DEBUG_BLE_TRACE',['../group__app__conf.html#gaa7de434606bceebadc82a78ad56d67fc',1,'app_conf.h']]],
-  ['cfg_5fdebug_5ftrace_5ffull',['CFG_DEBUG_TRACE_FULL',['../group__app__conf.html#gacf8e9324cd39485d3d54f19d1a54467a',1,'CFG_DEBUG_TRACE_FULL():&#160;app_conf.h'],['../group__app__conf.html#gacf8e9324cd39485d3d54f19d1a54467a',1,'CFG_DEBUG_TRACE_FULL():&#160;app_conf.h']]],
-  ['cfg_5fdebug_5ftrace_5flight',['CFG_DEBUG_TRACE_LIGHT',['../group__app__conf.html#ga81a22ab97ffe1348b57eda5eb3cec1e8',1,'CFG_DEBUG_TRACE_LIGHT():&#160;app_conf.h'],['../group__app__conf.html#ga81a22ab97ffe1348b57eda5eb3cec1e8',1,'CFG_DEBUG_TRACE_LIGHT():&#160;app_conf.h']]],
   ['cfg_5fdebug_5ftrace_5fuart',['CFG_DEBUG_TRACE_UART',['../group__app__conf.html#ga11c849ab8898b88263ff7f953d17124e',1,'app_conf.h']]],
   ['cfg_5fdebugger_5fsupported',['CFG_DEBUGGER_SUPPORTED',['../group__app__conf.html#ga614c6eab72cd2ca80afc15c3992b003f',1,'app_conf.h']]],
   ['cfg_5fencryption_5fkey_5fsize_5fmax',['CFG_ENCRYPTION_KEY_SIZE_MAX',['../group__app__conf.html#ga5f119c4c356762a416e2e8bf82c293ca',1,'app_conf.h']]],
@@ -100,8 +97,8 @@ var searchData=
   ['cli_5faccess_5fmask_5fsuper',['cli_access_mask_super',['../group__cli__srv.html#gga1fe290e0f7d6cab8903a74b5f17113e6af3f9a4c52d4edcb2ccf5eb484c538ae3',1,'srv_cli.h']]],
   ['cli_5faccess_5fmask_5ft',['cli_access_mask_t',['../group__cli__srv.html#ga1fe290e0f7d6cab8903a74b5f17113e6',1,'srv_cli.h']]],
   ['cli_5faccess_5fmask_5fuser',['cli_access_mask_user',['../group__cli__srv.html#gga1fe290e0f7d6cab8903a74b5f17113e6a2771f4519c7165553e441169673e26d9',1,'srv_cli.h']]],
-  ['cli_5fcmd_5foption_5findex_5fambiguous',['cli_cmd_option_index_ambiguous',['../group__cli__srv.html#ggaf715e26dfffd1f8de1c18449e2770cffa7ec9e838bb87278f077485131f3a36da',1,'srv_cli.h']]],
-  ['cli_5fcmd_5foption_5findex_5fnot_5ffound',['cli_cmd_option_index_not_found',['../group__cli__srv.html#ggaf715e26dfffd1f8de1c18449e2770cffa2e3333b6b26a7da02070b95c71c2b386',1,'srv_cli.h']]],
+  ['cli_5fcmd_5foption_5findex_5fambiguous',['cli_cmd_option_index_ambiguous',['../group__cli__srv.html#ggafb730582952b7ceec73d7dc9bf7bef39a7ec9e838bb87278f077485131f3a36da',1,'srv_cli.h']]],
+  ['cli_5fcmd_5foption_5findex_5fnot_5ffound',['cli_cmd_option_index_not_found',['../group__cli__srv.html#ggafb730582952b7ceec73d7dc9bf7bef39a2e3333b6b26a7da02070b95c71c2b386',1,'srv_cli.h']]],
   ['cli_5fcmd_5foption_5ft',['cli_cmd_option_t',['../structcli__cmd__option__t.html',1,'']]],
   ['cli_5fcommand_5ffunc_5fregister',['CLI_COMMAND_FUNC_REGISTER',['../group__cli__srv.html#ga749bc57ccdf6a7adac40483d31a0997f',1,'srv_cli.h']]],
   ['cli_5fcommand_5ftab_5fregister',['CLI_COMMAND_TAB_REGISTER',['../group__cli__srv.html#gabec658c67563eae92e4f3ed0685859b7',1,'srv_cli.h']]],
@@ -201,5 +198,15 @@ var searchData=
   ['corrected_5ftrimming_5fvalue',['corrected_trimming_value',['../structaos__calib__hsi__result__t.html#a9c97cc99f4784fe845827699fadd8591',1,'aos_calib_hsi_result_t']]],
   ['counters',['counters',['../structaos__gnss__ioctl__t.html#ac53ea8952afa16d812e31e977270dd86',1,'aos_gnss_ioctl_t']]],
   ['csfr',['csfr',['../structaos__error__reg__info__t.html#a971a7e287ad15c80ebd1710d4887e17a',1,'aos_error_reg_info_t']]],
-  ['custom',['custom',['../structsrv__ble__scan__beacon__info__t.html#a4a856f5a1f6ceff3a2553f7fdf02e4a7',1,'srv_ble_scan_beacon_info_t']]]
+  ['custom',['custom',['../structsrv__ble__scan__beacon__info__t.html#a4a856f5a1f6ceff3a2553f7fdf02e4a7',1,'srv_ble_scan_beacon_info_t']]],
+  ['custom_5f10_5fservice',['CUSTOM_10_SERVICE',['../group__aos__ble__common.html#gga4caf8d8f829279fba122163d961608a4a97024e6a854aee0b5b08ff5ef9c59093',1,'aos_ble_common.h']]],
+  ['custom_5f1_5fservice',['CUSTOM_1_SERVICE',['../group__aos__ble__common.html#gga4caf8d8f829279fba122163d961608a4afadc237698a0df2b9d61b9fa403eb34c',1,'aos_ble_common.h']]],
+  ['custom_5f2_5fservice',['CUSTOM_2_SERVICE',['../group__aos__ble__common.html#gga4caf8d8f829279fba122163d961608a4a46c79465dbd61bda5ffe161cc64cd229',1,'aos_ble_common.h']]],
+  ['custom_5f3_5fservice',['CUSTOM_3_SERVICE',['../group__aos__ble__common.html#gga4caf8d8f829279fba122163d961608a4ae3054684ebf9f90ac3daebb59e8feb7b',1,'aos_ble_common.h']]],
+  ['custom_5f4_5fservice',['CUSTOM_4_SERVICE',['../group__aos__ble__common.html#gga4caf8d8f829279fba122163d961608a4a5882d1b840715c9e33c996eaff2aeb5a',1,'aos_ble_common.h']]],
+  ['custom_5f5_5fservice',['CUSTOM_5_SERVICE',['../group__aos__ble__common.html#gga4caf8d8f829279fba122163d961608a4af1f2c72ad9b298922238e0f779ef05f1',1,'aos_ble_common.h']]],
+  ['custom_5f6_5fservice',['CUSTOM_6_SERVICE',['../group__aos__ble__common.html#gga4caf8d8f829279fba122163d961608a4a5740cc0a529e59cf13add74cf02a5de1',1,'aos_ble_common.h']]],
+  ['custom_5f7_5fservice',['CUSTOM_7_SERVICE',['../group__aos__ble__common.html#gga4caf8d8f829279fba122163d961608a4a3fcfe1d3ce5b02660889c59936915e8d',1,'aos_ble_common.h']]],
+  ['custom_5f8_5fservice',['CUSTOM_8_SERVICE',['../group__aos__ble__common.html#gga4caf8d8f829279fba122163d961608a4aaa19b956352221eea3c53b0715b32901',1,'aos_ble_common.h']]],
+  ['custom_5f9_5fservice',['CUSTOM_9_SERVICE',['../group__aos__ble__common.html#gga4caf8d8f829279fba122163d961608a4a98e890fa4a284c4a39077d2de01091a8',1,'aos_ble_common.h']]]
 ];

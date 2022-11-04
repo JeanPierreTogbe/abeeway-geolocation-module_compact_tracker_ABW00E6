@@ -34,7 +34,7 @@
 #include "aos_rf_switch.h"
 #include "aos_lpm.h"
 #include "aos_ble_core.h"
-#include "aos_dis.h"
+//#include "aos_dis.h"
 #include "strnhex.h"
 
 #include "srv_ble_dtm.h"
@@ -54,6 +54,7 @@ static struct {
 	bool    drv_open;
 	uint8_t ble_role;
 } cli_ble_ctx = {0};
+
 
 
 
@@ -620,6 +621,7 @@ static void _display_open_help(void)
 
 static cli_parser_status_t _cmd_ble_open(void* arg, int argc, char *argv[])
 {
+	aos_ble_app_data_t app_info; // declared because of the new aos-sdk
 	enum {opt_obs, opt_periph, opt_both, opt_short_help, opt_help, opt_count };
 	static const cli_cmd_option_t options[] = {
 			{ "observer", opt_obs },
@@ -687,12 +689,14 @@ static cli_parser_status_t _cmd_ble_open(void* arg, int argc, char *argv[])
 		cli_printf("Fail to acquire the antenna\n");
 		return cli_parser_status_error;
 	}
-	// Set deveui value needed by DIS service
-	uint8_t deveui[PROVISIONING_EUI_SIZE];
-	srv_provisioning_get_lora_device_eui(deveui);
-	aos_dis_set_dev_eui(deveui);
 
-	APP_BLE_Init(cli_ble_ctx.ble_role);
+	// deveui changes cause of the new aos-sdk
+	srv_provisioning_get_lora_device_eui(app_info.deveui);
+	app_info.app_version = 0;
+	aos_ble_core_get_firmware_version(&app_info.fw_version);
+	app_info.ble_services_mask = 0xFF;
+
+	APP_BLE_Init(cli_ble_ctx.ble_role, app_info);
 	aos_lpm_set_mode(aos_lpm_requester_application, aos_lpm_mode_no_sleep, NULL, NULL);
 
 	cli_ble_ctx.drv_open = true;

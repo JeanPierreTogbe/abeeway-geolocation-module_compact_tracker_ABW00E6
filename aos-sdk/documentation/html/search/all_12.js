@@ -2,8 +2,8 @@ var searchData=
 [
   ['uart_20driver',['UART driver',['../group__aos__uart.html',1,'']]],
   ['uart_5fcfg',['uart_cfg',['../structcli__config__param__t.html#a3d27a0548eb2acaf5ed41fb345b7b7b3',1,'cli_config_param_t']]],
-  ['uid',['uid',['../structsrv__ble__scan__eddystone__info__t.html#ad5a5989866a9565447027a9a9023bdc5',1,'srv_ble_scan_eddystone_info_t']]],
-  ['url',['url',['../structsrv__ble__scan__eddystone__info__t.html#adcb91aaf1c41e8fcedf2c74d27a13d26',1,'srv_ble_scan_eddystone_info_t']]],
+  ['uid',['uid',['../structsrv__ble__scan__eddystone__info__t.html#a4fc3e53951a1311cb8a33e4fb0cb4878',1,'srv_ble_scan_eddystone_info_t']]],
+  ['url',['url',['../structsrv__ble__scan__eddystone__info__t.html#aa5699bd93a5e28c8554ae517e361350a',1,'srv_ble_scan_eddystone_info_t']]],
   ['url_5fencoded',['url_encoded',['../structsrv__ble__scan__eddystone__info__t.html#ac2779f9a5e93f44b964456ab24f61229',1,'srv_ble_scan_eddystone_info_t']]],
   ['url_5fscheme',['url_scheme',['../structsrv__ble__scan__eddystone__info__t.html#a96e48d1948ee0921c1cd4a03adef93c4',1,'srv_ble_scan_eddystone_info_t']]],
   ['use_5fspi_5fcrc',['USE_SPI_CRC',['../stm32wbxx__hal__conf_8h.html#a4c6fab687afc7ba4469b1b2d34472358',1,'stm32wbxx_hal_conf.h']]],

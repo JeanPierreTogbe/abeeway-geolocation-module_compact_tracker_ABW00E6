@@ -13,7 +13,7 @@
 #include "srv_cli.h"
 #include "srv_provisioning.h"
 #include "aos_lpm.h"
-#include "aos_dis.h"
+//#include "aos_dis.h"
 #include "aos_rf_switch.h"
 #include "aos_ble_core.h"
 #include "srv_ble_scan.h"

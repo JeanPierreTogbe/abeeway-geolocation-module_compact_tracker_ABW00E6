@@ -29,7 +29,6 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "ble_common.h"
 #include "ble.h"
-#include "dbg_trace.h"
 
 
 

@@ -74,14 +74,23 @@ $(function() {
 <li>aos_adc_read_cpu_temperature()
 : <a class="el" href="group__aos__adc.html#ga9c6a5f93ea9d57a3bdce4c2eae094710">aos_adc.h</a>
 </li>
-<li>aos_ble_core_avertise()
-: <a class="el" href="group__aos__ble__core.html#gad4638afed6813d0421bafd10f87e6ed5">aos_ble_core.h</a>
+<li>aos_ble_core_advertise()
+: <a class="el" href="group__aos__ble__core.html#ga6ac82fd0b7c8e307fdfe7f3b51588e32">aos_ble_core.h</a>
+</li>
+<li>aos_ble_core_get_adv_status()
+: <a class="el" href="group__aos__ble__core.html#gacdf55c92c6146920853492ea89f99436">aos_ble_core.h</a>
+</li>
+<li>aos_ble_core_get_firmware_version()
+: <a class="el" href="group__aos__ble__core.html#gad7f0461def80adc1cd4571bceaf6f4c7">aos_ble_core.h</a>
 </li>
 <li>aos_ble_core_get_tx_power_dbm()
 : <a class="el" href="group__aos__ble__core.html#ga90841f93dc44a1ee6b1ff7fc9bdf63b4">aos_ble_core.h</a>
 </li>
 <li>aos_ble_core_get_tx_power_level()
 : <a class="el" href="group__aos__ble__core.html#ga4db7b2431174ceaaa4fe4ed8f2e07bb8">aos_ble_core.h</a>
+</li>
+<li>aos_ble_core_remove_bond()
+: <a class="el" href="group__aos__ble__core.html#gacff3c2fb72a1c7fb41808b9a00ee17d8">aos_ble_core.h</a>
 </li>
 <li>aos_ble_core_scan_callback_t
 : <a class="el" href="group__aos__ble__core.html#ga914ca2bcdef0ff0518b4f7643026af8e">aos_ble_core.h</a>
@@ -91,6 +100,9 @@ $(function() {
 </li>
 <li>aos_ble_core_set_tx_power_level()
 : <a class="el" href="group__aos__ble__core.html#ga16284132bcba512b97d1db5a37d130d7">aos_ble_core.h</a>
+</li>
+<li>aos_ble_core_stop_connectivity()
+: <a class="el" href="group__aos__ble__core.html#gaef400d428216a871e0071f3b85de2fea">aos_ble_core.h</a>
 </li>
 <li>AOS_BLE_CORE_TX_POWER_LEVEL_MAX
 : <a class="el" href="group__aos__ble__core.html#ga391b9f32d78aef608c1419b3d5c692cd">aos_ble_core.h</a>
@@ -157,9 +169,6 @@ $(function() {
 </li>
 <li>aos_cli_set_user_arg
 : <a class="el" href="group__cli__low__layer.html#gae4e61d684ecfed072deb5b5145e5a2c9">aos_cli.h</a>
-</li>
-<li>aos_dis_set_dev_eui()
-: <a class="el" href="group__aos__dis.html#ga68896c77fae047365c7e43968437f2d8">aos_dis.h</a>
 </li>
 <li>aos_error_clear()
 : <a class="el" href="group__aos__error.html#gacf353ca19dfd2fa5ab403833de57f9bb">aos_error.h</a>
@@ -529,9 +538,6 @@ $(function() {
 </li>
 <li>aos_gnss_type_t
 : <a class="el" href="group__gnss__srv.html#ga93ee528a10225ce8a2fcc7df68ea7007">srv_gnss.h</a>
-</li>
-<li>aos_gpio_bat_setup()
-: <a class="el" href="group__aos__system.html#ga05f49fe0a0ef9103e1bceba8dd528d9e">aos_gpio.h</a>
 </li>
 <li>aos_gpio_close()
 : <a class="el" href="group__aos__system.html#ga93836b88f5f4b692db99991e9d29d9da">aos_gpio.h</a>
@@ -989,6 +995,9 @@ $(function() {
 <li>aos_lpm_requester_application
 : <a class="el" href="group__aos__lpm.html#gga7d44fadef00c619cdbf34c39205dd0e8affe1a4dd23bbeea44cef28c3e78625e1">aos_lpm.h</a>
 </li>
+<li>aos_lpm_requester_ble
+: <a class="el" href="group__aos__lpm.html#gga7d44fadef00c619cdbf34c39205dd0e8a21443507e9976c845bf88400de9f6ba2">aos_lpm.h</a>
+</li>
 <li>aos_lpm_requester_callback_t
 : <a class="el" href="group__aos__lpm.html#ga9dfc9f6e97b787dcb0f49f66cdef1d64">aos_lpm.h</a>
 </li>
@@ -1370,9 +1379,6 @@ $(function() {
 <li>APP_BLE_IDLE
 : <a class="el" href="group__aos__ble__core.html#gga37d5ee55761f10b83d1caea6523c7528adac4ff4feeee8b5b887cb2249c8f1c69">aos_ble_core.h</a>
 </li>
-<li>APP_BLE_Init()
-: <a class="el" href="group__aos__ble__core.html#ga9b46172be42eff2b8758f5b45a50fd07">aos_ble_core.h</a>
-</li>
 <li>APP_BLE_LP_ADV
 : <a class="el" href="group__aos__ble__core.html#gga37d5ee55761f10b83d1caea6523c7528a8dc9a4f1638a2e50d78033aa70738340">aos_ble_core.h</a>
 </li>
@@ -1384,6 +1390,9 @@ $(function() {
 </li>
 <li>APP_DBG_MSG
 : <a class="el" href="group__app__conf.html#ga2b2c2d566c41f3c35985b3c52be418fb">app_conf.h</a>
+</li>
+<li>APP_WRNG_MSG
+: <a class="el" href="group__app__conf.html#ga5b5dc558c6e57fa28935b5d58c34b10f">app_conf.h</a>
 </li>
 <li>APPD_EnableCPU2()
 : <a class="el" href="group__app__debug.html#ga8e13b6550bae1951561cc97cb921efc2">app_debug.h</a>

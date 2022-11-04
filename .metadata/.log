@@ -1,0 +1,42 @@
+!SESSION 2022-11-04 14:31:22.608 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-11-04 14:32:22.796
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-11-04 14:32:22.884
+!MESSAGE Log4j initialized with config file C:\Users\Jean-PierreTogbe\STM32CubeIDE\workspace_1.10.1\abeeway-geolocation-module\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-11-04 14:32:26.162
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-04 14:32:54.205
+!MESSAGE Indexed 'app-cmty_ble-geoloc' (18 sources, 212 headers) in 4,75 sec: 18 726 declarations; 39 717 references; 6 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-04 14:32:58.303
+!MESSAGE Indexed 'app-abw-demo' (11 sources, 202 headers) in 3,31 sec: 18 539 declarations; 39 101 references; 1 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-04 14:33:01.029
+!MESSAGE Indexed 'app-cmty_cli' (12 sources, 201 headers) in 2,51 sec: 18 532 declarations; 39 144 references; 1 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-04 14:33:03.293
+!MESSAGE Indexed 'app-cmty_demo' (12 sources, 201 headers) in 2,26 sec: 18 547 declarations; 39 189 references; 1 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+!SESSION 2022-11-04 14:35:12.363 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-11-04 14:35:24.184
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-11-04 14:35:24.251
+!MESSAGE Log4j initialized with config file C:\Users\Jean-PierreTogbe\STM32CubeIDE\workspace_1.10.1\abeeway-geolocation-module\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-11-04 14:35:32.510
+!MESSAGE Started RMI Server, listening on port 41337

@@ -20,7 +20,7 @@
 #include "aos_system.h"
 #include "aos_board.h"
 #include "aos_lpm.h"
-#include "aos_dis.h"
+//#include "aos_dis.h"
 #include "aos_rf_switch.h"
 #include "aos_ble_core.h"
 #include "aos_log.h"

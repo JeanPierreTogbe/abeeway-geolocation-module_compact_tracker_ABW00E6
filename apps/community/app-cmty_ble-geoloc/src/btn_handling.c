@@ -9,7 +9,7 @@
 #include "aos_system.h"
 #include "aos_board.h"
 #include "aos_lpm.h"
-#include "aos_dis.h"
+//#include "aos_dis.h"
 #include "aos_rf_switch.h"
 #include "aos_ble_core.h"
 #include "aos_log.h"
@@ -27,6 +27,8 @@ struct {
 	bool    drv_open;
 	uint8_t ble_role;
 } btn_ctx = {0};
+
+aos_ble_app_data_t app_info; // declared because of the new aos-sdk
 
 void btn_handling_config(aos_gpio_id_t gpio, aos_system_user_callback_t cb)
 {
@@ -51,11 +53,12 @@ void btn_handling_open()
 				cli_printf("Fail to acquire the antenna\n");
 		}
 
-		uint8_t deveui[PROVISIONING_EUI_SIZE];
-		srv_provisioning_get_lora_device_eui(deveui);
-		aos_dis_set_dev_eui(deveui);
+		srv_provisioning_get_lora_device_eui(app_info.deveui);
+		app_info.app_version = 0;
+		aos_ble_core_get_firmware_version(&app_info.fw_version);
+		app_info.ble_services_mask = 0xFF;
 
-		APP_BLE_Init(btn_ctx.ble_role);
+		APP_BLE_Init(btn_ctx.ble_role, app_info);
 		aos_lpm_set_mode(aos_lpm_requester_application, aos_lpm_mode_no_sleep, NULL, NULL);
 
 		btn_ctx.drv_open = true;

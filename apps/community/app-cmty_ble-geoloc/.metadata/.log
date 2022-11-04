@@ -1,0 +1,63 @@
+!SESSION 2022-11-04 14:25:44.649 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  C:\Users\Jean-PierreTogbe\STM32CubeIDE\workspace_1.10.1\abeeway-geolocation-module\apps\community\app-cmty_ble-geoloc\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\Jean-PierreTogbe\STM32CubeIDE\workspace_1.10.1\abeeway-geolocation-module\apps\community\app-cmty_ble-geoloc\.cproject
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-11-04 14:26:14.209
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-11-04 14:26:14.286
+!MESSAGE Log4j initialized with config file C:\Users\Jean-PierreTogbe\STM32CubeIDE\workspace_1.10.1\abeeway-geolocation-module\apps\community\app-cmty_ble-geoloc\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-11-04 14:26:17.575
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-11-04 14:28:02.805 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  C:\Users\Jean-PierreTogbe\STM32CubeIDE\abeeway-geolocation-module\apps\community\app-cmty_ble-geoloc\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\Jean-PierreTogbe\STM32CubeIDE\abeeway-geolocation-module\apps\community\app-cmty_ble-geoloc\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-11-04 14:28:12.643
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-11-04 14:28:12.716
+!MESSAGE Log4j initialized with config file C:\Users\Jean-PierreTogbe\STM32CubeIDE\workspace_1.10.1\abeeway-geolocation-module\apps\community\app-cmty_ble-geoloc\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-11-04 14:28:17.202
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-04 14:28:26.880
+!MESSAGE Indexed 'app-cmty_ble-geoloc' (18 sources, 204 headers) in 6,2 sec: 16 635 declarations; 31 882 references; 61 unresolved inclusions; 1 782 syntax errors; 4 047 unresolved names (7,7 %)
+!SESSION 2022-11-04 14:29:41.393 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  C:\Users\Jean-PierreTogbe\STM32CubeIDE\abeeway-geolocation-module\apps\community\app-cmty_ble-geoloc\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\Jean-PierreTogbe\STM32CubeIDE\abeeway-geolocation-module\apps\community\app-cmty_ble-geoloc\.cproject
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-11-04 14:29:49.001
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-11-04 14:29:49.068
+!MESSAGE Log4j initialized with config file C:\Users\Jean-PierreTogbe\STM32CubeIDE\workspace_1.10.1\abeeway-geolocation-module\apps\community\app-cmty_ble-geoloc\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-11-04 14:29:54.923
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-04 14:30:00.217
+!MESSAGE Indexed 'app-cmty_ble-geoloc' (18 sources, 213 headers) in 4,66 sec: 18 709 declarations; 39 690 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-04 14:30:42.016
+!MESSAGE Indexed 'app-abw-demo' (11 sources, 203 headers) in 3,37 sec: 18 523 declarations; 39 074 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-04 14:30:44.624
+!MESSAGE Indexed 'app-cmty_cli' (12 sources, 202 headers) in 2,6 sec: 18 516 declarations; 39 117 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-04 14:30:47.249
+!MESSAGE Indexed 'app-cmty_demo' (12 sources, 202 headers) in 2,62 sec: 18 531 declarations; 39 162 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)

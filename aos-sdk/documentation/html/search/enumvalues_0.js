@@ -148,6 +148,7 @@ var searchData=
   ['aos_5flpm_5fmode_5fstop1',['aos_lpm_mode_stop1',['../group__aos__lpm.html#ggad19d1197befd701115cbfe818783be37a5230845dafbe1817d1bac82e56e41bde',1,'aos_lpm.h']]],
   ['aos_5flpm_5fmode_5fstop2',['aos_lpm_mode_stop2',['../group__aos__lpm.html#ggad19d1197befd701115cbfe818783be37a3a9ae8b5c0408f838f1742a8533f039b',1,'aos_lpm.h']]],
   ['aos_5flpm_5frequester_5fapplication',['aos_lpm_requester_application',['../group__aos__lpm.html#gga7d44fadef00c619cdbf34c39205dd0e8affe1a4dd23bbeea44cef28c3e78625e1',1,'aos_lpm.h']]],
+  ['aos_5flpm_5frequester_5fble',['aos_lpm_requester_ble',['../group__aos__lpm.html#gga7d44fadef00c619cdbf34c39205dd0e8a21443507e9976c845bf88400de9f6ba2',1,'aos_lpm.h']]],
   ['aos_5flpm_5frequester_5fcli',['aos_lpm_requester_cli',['../group__aos__lpm.html#gga7d44fadef00c619cdbf34c39205dd0e8a5fd9e8814c84853e1ec637f5b42607c1',1,'aos_lpm.h']]],
   ['aos_5flpm_5frequester_5fflash',['aos_lpm_requester_flash',['../group__aos__lpm.html#gga7d44fadef00c619cdbf34c39205dd0e8add5b8b59aac98c5139351456f87aed10',1,'aos_lpm.h']]],
   ['aos_5flpm_5frequester_5fi2c_5fexternal',['aos_lpm_requester_i2c_external',['../group__aos__lpm.html#gga7d44fadef00c619cdbf34c39205dd0e8add523498ce9ad31e68aa1360eab691ba',1,'aos_lpm.h']]],

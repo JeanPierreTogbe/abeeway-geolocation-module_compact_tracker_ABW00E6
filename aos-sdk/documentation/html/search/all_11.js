@@ -16,7 +16,7 @@ var searchData=
   ['tl_5fmm_5fdbg_5fmsg',['TL_MM_DBG_MSG',['../aos__tl__dbg__conf_8h.html#af66be98bf8d9ad8d660864dd42ec9073',1,'aos_tl_dbg_conf.h']]],
   ['tl_5fshci_5fcmd_5fdbg_5fen',['TL_SHCI_CMD_DBG_EN',['../aos__tl__dbg__conf_8h.html#a3397d2235a24b165a08c96102f432970',1,'aos_tl_dbg_conf.h']]],
   ['tl_5fshci_5fcmd_5fdbg_5fmsg',['TL_SHCI_CMD_DBG_MSG',['../aos__tl__dbg__conf_8h.html#a1ce0af7fe7c9fcc1445c112693bafe59',1,'aos_tl_dbg_conf.h']]],
-  ['tlm',['tlm',['../structsrv__ble__scan__eddystone__info__t.html#a1a6c8fad927becc8a2c86d38a07262ff',1,'srv_ble_scan_eddystone_info_t']]],
+  ['tlm',['tlm',['../structsrv__ble__scan__eddystone__info__t.html#abf0deac68cde0ee33147305135d21034',1,'srv_ble_scan_eddystone_info_t']]],
   ['tow',['tow',['../structaos__gnss__week__tow__time__info__t.html#a0d9e12edc269e0f1638447fa178e61e1',1,'aos_gnss_week_tow_time_info_t']]],
   ['track_5fperiod',['track_period',['../structaos__gnss__cfg__period__t.html#a1b012c61e89f0952a5364e793b848899',1,'aos_gnss_cfg_period_t::track_period()'],['../structaos__gnss__configuration__t.html#af48b8bbd43f2024e9f88afa8e767c777',1,'aos_gnss_configuration_t::track_period()']]],
   ['track_5fsatellites',['track_satellites',['../structaos__gnss__fix__info__t.html#ac6dfdd840446347d76aefacd809c219a',1,'aos_gnss_fix_info_t']]],
@@ -29,5 +29,6 @@ var searchData=
   ['tx_5fbytes',['tx_bytes',['../structaos__uart__stats__t.html#a1b12dad73ba07457c7efdcfcfb481e72',1,'aos_uart_stats_t']]],
   ['tx_5flen',['tx_len',['../structnmea__parsing__cb__param__ack__t.html#a0d0ed247c0ebcf22c68106069422b40a',1,'nmea_parsing_cb_param_ack_t']]],
   ['tx_5fpower',['tx_power',['../structsrv__ble__scan__beacon__info__t.html#aa1f8bb4b25e30ff064a5daabefdc0e33',1,'srv_ble_scan_beacon_info_t::tx_power()'],['../structsrv__ble__scan__short__beacon__info__t.html#ab86b7ac4d4790bcb737f2ae9e53998db',1,'srv_ble_scan_short_beacon_info_t::tx_power()'],['../structsrv__ble__scan__long__beacon__info__t.html#ae490b6257baa6effddf2f2875a243f3d',1,'srv_ble_scan_long_beacon_info_t::tx_power()']]],
+  ['tx_5fpower_5fservice',['TX_POWER_SERVICE',['../group__aos__ble__common.html#gga4caf8d8f829279fba122163d961608a4aa330ad69c6d8d759175e0088230fbf80',1,'aos_ble_common.h']]],
   ['type',['type',['../structaos__gnss__time__info__t.html#a1ce7a452f29b2b2d7dee974bf496a6f1',1,'aos_gnss_time_info_t::type()'],['../structaos__gnss__cfg__local__info__t.html#af725b80552a253fb4ca40faa5de2329c',1,'aos_gnss_cfg_local_info_t::type()'],['../structnmea__dictionary__word__t.html#a19ef2a7fed5fee6248da2fb949897519',1,'nmea_dictionary_word_t::type()'],['../structaos__uart__ioctl__info__t.html#aed49b439f6d67800e3ed4c5d95be5430',1,'aos_uart_ioctl_info_t::type()'],['../structsrv__ble__scan__eddystone__info__t.html#af361bacc5444ad33233c7873b5f4c60e',1,'srv_ble_scan_eddystone_info_t::type()'],['../structsrv__ble__scan__beacon__info__t.html#a7f733e8470e199260206885497355a2c',1,'srv_ble_scan_beacon_info_t::type()']]]
 ];

@@ -70,7 +70,7 @@ extern "C" {
    * @param  None
    * @retval None
    */
-  void SVCCTL_Init( void );
+  void SVCCTL_Init( uint16_t ble_services_mask );
 
   /**
    * @brief  This API registers a handler to be called when a GATT user event is received from the BLE core device. When
@@ -160,7 +160,7 @@ extern "C" {
    * @param  None
    * @retval None
    */
-  void SVCCTL_SvcInit( void );
+  void SVCCTL_SvcInit( uint16_t ble_services_mask );
 
 #ifdef __cplusplus
 }

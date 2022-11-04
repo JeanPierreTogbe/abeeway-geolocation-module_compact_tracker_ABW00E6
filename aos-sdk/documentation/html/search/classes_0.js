@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['aos_5fble_5fapp_5fdata_5ft',['aos_ble_app_data_t',['../structaos__ble__app__data__t.html',1,'']]],
+  ['aos_5fble_5fcore_5ffw_5fversion_5ft',['aos_ble_core_fw_version_t',['../structaos__ble__core__fw__version__t.html',1,'']]],
   ['aos_5fcalib_5fhsi_5fresult_5ft',['aos_calib_hsi_result_t',['../structaos__calib__hsi__result__t.html',1,'']]],
   ['aos_5ferror_5fextra_5finfo_5ft',['aos_error_extra_info_t',['../structaos__error__extra__info__t.html',1,'']]],
   ['aos_5ferror_5finto_5ft',['aos_error_into_t',['../structaos__error__into__t.html',1,'']]],
