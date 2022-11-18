@@ -34,6 +34,8 @@
 #include "encode_handling.h"
 
 #include "FreeRTOS.h"
+#include "timers.h"    // FreeRTOS, timers
+#include "task.h"
 
 #include "LmHandler.h"
 
@@ -47,20 +49,28 @@
 #include "srv_ble_beaconing.h"
 #include "srv_provisioning.h"
 
-#include "task.h"
+
 
 // General definitions
 #define APP_MAIN_LED_PERIOD			1000	//!< Main LED blink period in ms
 // Default prefixs of BLE Filter
 #define ABW_MAIN1_PREFIX "ABEE"
-#define ABW_MAIN2_PREFIX "WAY0"
+#define ABW_MAIN2_PREFIX "WAY1"
 // Application parameters stored in Flash
 #define PARAM_ID_REPEAT_DELAY	0x69
 #define PARAM_ID_FILTER_MAIN1	0x4E
 #define PARAM_ID_FILTER_MAIN2	0x4F
 
-static uint8_t result; // a result of the BLE scan variable
-static srv_ble_scan_param_t* ble_param; // variable of the BLE scan parameter setting
+typedef struct {
+	srv_ble_scan_param_t* ble_param; // variable of the BLE scan parameter setting
+	bool button_ack;
+	TimerHandle_t timer_handle;
+	StaticTimer_t timer_local_data;
+	UBaseType_t timer_count;
+} app_scan_report_ctx_t;
+
+static app_scan_report_ctx_t _ctx = {0};
+
 
 void on_rx_data( LmHandlerAppData_t *appData, LmHandlerRxParams_t *params)
 {
@@ -77,31 +87,29 @@ void on_rx_data( LmHandlerAppData_t *appData, LmHandlerRxParams_t *params)
 			value = (value > 300) ? 300 : ((value < 15) ? 15 : value); // test to sure that value is between 15 and 300s
 
 			aos_nvm_write(PARAM_ID_REPEAT_DELAY, value);
-			ble_param->repeat_delay = value;
-			cli_printf("DURATION :  %d\n", ble_param->repeat_delay);
+			_ctx.ble_param->repeat_delay = value;
+			cli_printf("DURATION :  %d\n",_ctx.ble_param->repeat_delay);
 		}else if (id_value  == PARAM_ID_FILTER_MAIN1/*78*/){//ble filter 1 parameter
 
 			//cli_printf("Buf 1 :  %x\n", appData->Buffer[3]);
-			ble_param->filters[0].value[0] = appData->Buffer[3];
-			ble_param->filters[0].value[1] = appData->Buffer[4];
-			ble_param->filters[0].value[2] = appData->Buffer[5];
-			ble_param->filters[0].value[3] = appData->Buffer[6];
-			value = __builtin_bswap32(*(uint32_t *)&ble_param->filters[0].value);
+			_ctx.ble_param->filters[0].value[0] = appData->Buffer[3];
+			_ctx.ble_param->filters[0].value[1] = appData->Buffer[4];
+			_ctx.ble_param->filters[0].value[2] = appData->Buffer[5];
+			_ctx.ble_param->filters[0].value[3] = appData->Buffer[6];
+			value = __builtin_bswap32(*(uint32_t *)&_ctx.ble_param->filters[0].value);
 			aos_nvm_write(PARAM_ID_FILTER_MAIN1, value);
 
 			cli_printf("FILTER 1 :  %x\n", value);
 		}else if (id_value  == PARAM_ID_FILTER_MAIN2/*79*/){//ble filter 2 parameter
 
-			ble_param->filters[0].value[4] = appData->Buffer[3];
-			ble_param->filters[0].value[5] = appData->Buffer[4];
-			ble_param->filters[0].value[6] = appData->Buffer[5];
-			ble_param->filters[0].value[7] = appData->Buffer[6];
-			value = __builtin_bswap32(*(uint32_t *)&ble_param->filters[0].value[4]);
+			_ctx.ble_param->filters[0].value[4] = appData->Buffer[3];
+			_ctx.ble_param->filters[0].value[5] = appData->Buffer[4];
+			_ctx.ble_param->filters[0].value[6] = appData->Buffer[5];
+			_ctx.ble_param->filters[0].value[7] = appData->Buffer[6];
+			value = __builtin_bswap32(*(uint32_t *)&_ctx.ble_param->filters[0].value[4]);
 			aos_nvm_write(PARAM_ID_FILTER_MAIN2, value);
 
 			cli_printf("FILTER 2 :  %x\n", value);
-		}else{
-
 		}
 		break;
 	default:
@@ -112,70 +120,116 @@ void on_rx_data( LmHandlerAppData_t *appData, LmHandlerRxParams_t *params)
 
 void on_button_4_press(uint8_t user_id, void *arg)
 {
+	uint8_t result; // a result of the BLE scan variable
 
-	btn_handling_open();
-	aos_log_msg(aos_log_module_app, aos_log_level_status, true, "BUTTON BLE SCAN ACTIVATE PRESSED!\n");
+	if (!_ctx.button_ack) {
+		btn_handling_open();
+		aos_log_msg(aos_log_module_app, aos_log_level_status, true, "BUTTON BLE SCAN ACTIVATE PRESSED!\n");
 
-	cli_printf("ble start scan result : %d\n",ble_param->repeat_delay );
-	ble_param->ble_scan_type = srv_ble_scan_beacon_type_eddy_uid;
+		cli_printf("ble repeat delay: %d\n",_ctx.ble_param->repeat_delay );
+		_ctx.ble_param->ble_scan_type = srv_ble_scan_beacon_type_eddy_uid;
 
-	result = srv_ble_scan_start(ble_scan_handler_callback, arg);
-	cli_printf("ble start scan result : %d\n", result);
+		result = srv_ble_scan_start(ble_scan_handler_callback, arg);
+		cli_printf("ble start scan result : %d\n", result);
+		 _ctx.button_ack=true;
+
+		 //Blinking LED blue showing that the scan is working
+
+		 aos_log_msg(aos_log_module_app, aos_log_level_status, true, "Start blinking LED2\n");
+		 xTimerStart(_ctx.timer_handle,  pdMS_TO_TICKS(APP_MAIN_LED_PERIOD)); // call handler asap
+
+#if 0
+	 for ( ; ; ) {
+	 		// Toggle the LED state
+	 		//aos_board_led_set(aos_board_led_idx_led2, true);
+	 		aos_board_led_toggle(aos_board_led_idx_led2);
+	 		vTaskDelay(pdMS_TO_TICKS(APP_MAIN_LED_PERIOD));
+	 	}
+#endif
+
+	}else{
+		aos_log_msg(aos_log_module_app, aos_log_level_status, true, "BUTTON BLE SCAN SHUTDOWN PRESSED!\n");
+		//aos_board_led_set(aos_board_led_idx_led2, false);
+	    btn_handling_close();
+	    _ctx.button_ack=false;
+		 xTimerStop(_ctx.timer_handle, 0);
+		 aos_board_led_set(aos_board_led_idx_led2, 0);
+	}
 }
 
+static void _led1_blink_timeout( TimerHandle_t xTimer )
+{
+	aos_log_msg(aos_log_module_app, aos_log_level_status, true, "HERE\n");
+
+	//time : 1000 ms
+	aos_board_led_toggle(aos_board_led_idx_led2);
+}
 
 void application_task(void *argument)
 {
 	uint32_t value;
 	bool valid;
+
 	aos_log_msg(aos_log_module_app, aos_log_level_status, true, "Starting application thread\n");
 	// Initiating LoRaMAC Handler service
 	aos_log_msg(aos_log_module_app, aos_log_level_status, true, "Initiating LoRaMAC Handler service\n");
 	srv_lmh_open(on_rx_data);
 	// Button (Board switch 04) configuration
-	btn_handling_config(aos_gpio_id_7, on_button_4_press);
+	btn_handling_config(/*aos_gpio_id_7*/aos_gpio_id_9, on_button_4_press);
 	//Button (Board switch 05) configuration
 	btn_handling_config(aos_gpio_id_8, on_button_5_press);
-	// >Pre-initialze the BLE param
-	ble_param = srv_ble_scan_get_params();
-	//Repeat delay at value or 30s by default
-	ble_param->repeat_delay = ((aos_nvm_read(PARAM_ID_REPEAT_DELAY, &value)== aos_result_success) ? value : 30);
 
-	memset(&ble_param->filters[0], 0, sizeof(ble_param->filters));
-	ble_param->filters[0].start_offset = 13;
+	// Timer init
+	_ctx.timer_handle =  xTimerCreateStatic("LED timer",  pdMS_TO_TICKS(APP_MAIN_LED_PERIOD), pdTRUE,
+			&_ctx.timer_count,
+			_led1_blink_timeout,
+			&_ctx.timer_local_data);
+
+	if (!_ctx.timer_handle) {
+		aos_log_msg(aos_log_module_app, aos_log_level_status, true, "Timer creation failure\n");
+	}
+
+
+	// >Pre-initialze the BLE param
+	_ctx.ble_param = srv_ble_scan_get_params();
+	//Repeat delay at value or 30s by default
+	_ctx.ble_param->repeat_delay = ((aos_nvm_read(PARAM_ID_REPEAT_DELAY, &value)== aos_result_success) ? value : 30);
+
+	memset(_ctx.ble_param->filters, 0, sizeof(_ctx.ble_param->filters));
+	_ctx.ble_param->filters[0].start_offset = 13;
 	// FILTRE MAIN1
 	valid = false;
 	if(aos_nvm_read(PARAM_ID_FILTER_MAIN1, &value)==aos_result_success){
 		if (value) {
-			baswap(ble_param->filters[0].value, (uint8_t*)&value, sizeof(value));
-			memset(ble_param->filters[0].mask, 0xFF , sizeof(value));
+			baswap(_ctx.ble_param->filters[0].value, (uint8_t*)&value, sizeof(value));
+			memset(_ctx.ble_param->filters[0].mask, 0xFF , sizeof(value));
 			valid = true;
 		}
 	}
 	if (!valid) {
-		memcpy(ble_param->filters[0].value, ABW_MAIN1_PREFIX, strlen(ABW_MAIN1_PREFIX));
-		memset(ble_param->filters[0].mask, 0xFF , strlen(ABW_MAIN1_PREFIX));
+		memcpy(_ctx.ble_param->filters[0].value, ABW_MAIN1_PREFIX, strlen(ABW_MAIN1_PREFIX));
+		memset(_ctx.ble_param->filters[0].mask, 0xFF , strlen(ABW_MAIN1_PREFIX));
 	}
 
 	//FILTRE MAIN2
 	valid = false;
 	if(aos_nvm_read(PARAM_ID_FILTER_MAIN2, &value)==aos_result_success){
 		if (value) {
-			baswap(&ble_param->filters[0].value[4], (uint8_t*)&value, sizeof(value));
-			memset(&ble_param->filters[0].mask[4], 0xFF , sizeof(value));
+			baswap(&_ctx.ble_param->filters[0].value[4], (uint8_t*)&value, sizeof(value));
+			memset(&_ctx.ble_param->filters[0].mask[4], 0xFF , sizeof(value));
 			valid = true;
 		}
 	}
 	if (!value) {
-		memcpy(&ble_param->filters[0].value[4], ABW_MAIN2_PREFIX, strlen(ABW_MAIN2_PREFIX));
-		memset(&ble_param->filters[0].mask[4], 0xFF , strlen(ABW_MAIN2_PREFIX));
+		memcpy(&_ctx.ble_param->filters[0].value[4], ABW_MAIN2_PREFIX, strlen(ABW_MAIN2_PREFIX));
+		memset(&_ctx.ble_param->filters[0].mask[4], 0xFF , strlen(ABW_MAIN2_PREFIX));
 	}
 
 	// Start blinking LED3
 	aos_log_msg(aos_log_module_app, aos_log_level_status, true, "Start blinking LED3\n");
 	for ( ; ; ) {
 		// Toggle the LED state
-		aos_board_led_toggle(aos_board_led_idx_led3);
+		aos_board_led_toggle(/*aos_board_led_idx_led3*/aos_board_led_idx_led3);
 		vTaskDelay(pdMS_TO_TICKS(APP_MAIN_LED_PERIOD));
 	}
 	vTaskDelete(NULL);
