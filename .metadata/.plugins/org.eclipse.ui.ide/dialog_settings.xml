@@ -9,7 +9,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
-			<item value="C:\Users\Jean-PierreTogbe\STM32CubeIDE\workspace_1.10.1\abeeway-geolocation-module"/>
+			<item value="/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6"/>
 		</list>
 	</section>
 </section>
