@@ -37,57 +37,64 @@ extern "C" {
 /* Exported functions ------------------------------------------------------- */
 
 /*!
- * \fn void DISAPP_Init(void)
+ * \fn void dis_char_value_init(void)
  *
  * \brief Initialize Device Information Service
  *
  * \param app_info provide device information data characteristic data
  *
  */
-void DISAPP_Init(aos_ble_app_data_t *app_info);
+void dis_char_value_init(aos_ble_app_data_t *app_info);
 
 /*!
- * \fn void IASAPP_Init(void)
+ * \fn void ias_char_value_init(void)
  *
  * \brief Initialize Immediate Alert Service characteristic data
  *
  */
-void IASAPP_Init(void);
+void ias_char_value_init(void);
 
 /*!
- * \fn void LLSAPP_Init(void)
+ * \fn void lls_char_value_init(void)
  *
  * \brief Initialize Link Loss Service characteristic data
  *
  */
-void LLSAPP_Init(void);
+void lls_char_value_init(void);
 
 /*!
- * \fn void TPSAPP_Init(void)
+ * \fn void tps_char_value_init(void)
  *
  * \brief Initialize Tx Power Service characteristic data
  *
  * \param tx_power BLE tx power to initialize
  *
  */
-void TPSAPP_Init(int8_t tx_power);
+void tps_char_value_init(int8_t tx_power);
 
 /*!
- * \fn void BASAPP_Init(void)
+ * \fn void bas_char_value_init(void)
  *
  * \brief Initialize Battery Service characteristic data
  *
  */
-void BASAPP_Init(void);
+void bas_char_value_init(void);
 
 /*!
- * \fn void ESSAPP_Init(void)
+ * \fn void ess_char_value_init(void)
  *
  * \brief Initialize Environmental Sensing Service characteristic data
  *
  */
-void ESSAPP_Init(void);
+void ess_char_value_init(void);
 
+
+/**
+ * @brief  Event handler
+ * @param  Event: Address of the buffer holding the Event
+ * @retval Ack: Return whether the Event has been managed or not
+ */
+SVCCTL_EvtAckStatus_t custom_event_handler(void *Event);
 
 /*! @}*/
 #ifdef __cplusplus

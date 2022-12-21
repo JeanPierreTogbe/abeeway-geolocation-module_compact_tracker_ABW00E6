@@ -67,16 +67,16 @@ typedef struct {
 /* Exported functions ------------------------------------------------------- */
 
 /*!
- * \fn tBleStatus IAS_Init(void)
+ * \fn tBleStatus ias_init(void)
  *
  * \brief Immediate Alert service Initialization
  *
  * \return tBleStatus status
  */
-tBleStatus IAS_Init(void);
+tBleStatus ias_init(void);
 
 /*!
- * \fn tBleStatus IAS_Update_Char(uint16_t UUID, uint8_t *pPayload)
+ * \fn tBleStatus ias_update_char(uint16_t uuid, uint8_t *payload)
  *
  * \brief Update the data of the characteristic UUID with pPayload data
  *
@@ -86,16 +86,16 @@ tBleStatus IAS_Init(void);
  *
  * \return tBleStatus status
  */
-tBleStatus IAS_Update_Char(uint16_t UUID, uint8_t *pPayload);
+tBleStatus ias_update_char(uint16_t uuid, uint8_t *payload);
 
 /*!
- * \fn void IAS_App_Notification(BAS_Notification_evt_t * pNotification)
+ * \fn void ias_app_notification(BAS_Notification_evt_t * pNotification)
  *
  * \brief Immediate Alert service notification function
  *
  * \param pNotification notification event
  */
-void IAS_App_Notification(IAS_App_Notification_evt_t *pNotification);
+void ias_app_notification(IAS_App_Notification_evt_t *pNotification);
 
 
 /*! @}*/

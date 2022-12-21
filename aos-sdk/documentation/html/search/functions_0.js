@@ -2,12 +2,15 @@ var searchData=
 [
   ['aos_5fadc_5fread',['aos_adc_read',['../group__aos__adc.html#gac1105799e10c584b31a40c31bb147bd9',1,'aos_adc.h']]],
   ['aos_5fadc_5fread_5fcpu_5ftemperature',['aos_adc_read_cpu_temperature',['../group__aos__adc.html#ga9c6a5f93ea9d57a3bdce4c2eae094710',1,'aos_adc.h']]],
-  ['aos_5fble_5fcore_5fadvertise',['aos_ble_core_advertise',['../group__aos__ble__core.html#ga6ac82fd0b7c8e307fdfe7f3b51588e32',1,'aos_ble_core.h']]],
+  ['aos_5fble_5fcore_5fadvertise',['aos_ble_core_advertise',['../group__aos__ble__core.html#gac33873c6e7167aa76c870a5f8ee9fde8',1,'aos_ble_core.h']]],
   ['aos_5fble_5fcore_5fget_5fadv_5fstatus',['aos_ble_core_get_adv_status',['../group__aos__ble__core.html#gacdf55c92c6146920853492ea89f99436',1,'aos_ble_core.h']]],
-  ['aos_5fble_5fcore_5fget_5ffirmware_5fversion',['aos_ble_core_get_firmware_version',['../group__aos__ble__core.html#gad7f0461def80adc1cd4571bceaf6f4c7',1,'aos_ble_core.h']]],
+  ['aos_5fble_5fcore_5fget_5fbd_5faddress',['aos_ble_core_get_bd_address',['../group__aos__ble__core.html#ga558c4848aabd0b02eaa28e9840767103',1,'aos_ble_core.h']]],
+  ['aos_5fble_5fcore_5fget_5fconnection_5fstatus',['aos_ble_core_get_connection_status',['../group__aos__ble__core.html#ga15d319b1811fdf3d2e29729a20f3e125',1,'aos_ble_core.h']]],
+  ['aos_5fble_5fcore_5fget_5ffirmware_5fversion',['aos_ble_core_get_firmware_version',['../group__aos__ble__core.html#ga8a476c82b922f913f3419a743ddcbfd7',1,'aos_ble_core.h']]],
   ['aos_5fble_5fcore_5fget_5ftx_5fpower_5fdbm',['aos_ble_core_get_tx_power_dbm',['../group__aos__ble__core.html#ga90841f93dc44a1ee6b1ff7fc9bdf63b4',1,'aos_ble_core.h']]],
   ['aos_5fble_5fcore_5fget_5ftx_5fpower_5flevel',['aos_ble_core_get_tx_power_level',['../group__aos__ble__core.html#ga4db7b2431174ceaaa4fe4ed8f2e07bb8',1,'aos_ble_core.h']]],
   ['aos_5fble_5fcore_5fremove_5fbond',['aos_ble_core_remove_bond',['../group__aos__ble__core.html#gacff3c2fb72a1c7fb41808b9a00ee17d8',1,'aos_ble_core.h']]],
+  ['aos_5fble_5fcore_5fset_5flpm_5fmode',['aos_ble_core_set_lpm_mode',['../group__aos__ble__core.html#ga7cb2ab850119057f470a2910c4f83e82',1,'aos_ble_core.h']]],
   ['aos_5fble_5fcore_5fset_5fscan_5fcallback',['aos_ble_core_set_scan_callback',['../group__aos__ble__core.html#ga33516ed9a282b6dff170dff2a9d45ae6',1,'aos_ble_core.h']]],
   ['aos_5fble_5fcore_5fset_5ftx_5fpower_5flevel',['aos_ble_core_set_tx_power_level',['../group__aos__ble__core.html#ga16284132bcba512b97d1db5a37d130d7',1,'aos_ble_core.h']]],
   ['aos_5fble_5fcore_5fstop_5fconnectivity',['aos_ble_core_stop_connectivity',['../group__aos__ble__core.html#gaef400d428216a871e0071f3b85de2fea',1,'aos_ble_core.h']]],
@@ -90,7 +93,6 @@ var searchData=
   ['aos_5fsystem_5ftrigger_5fuser_5fcallback',['aos_system_trigger_user_callback',['../group__aos__system.html#gaa36f9d97f9beeffc5da07397388e3070',1,'aos_system.h']]],
   ['aos_5fsystem_5funregister_5fcallback',['aos_system_unregister_callback',['../group__aos__system.html#gacd248eef7d10568aa7db444d883b5d12',1,'aos_system.h']]],
   ['aos_5fuart_5fget_5fspeed',['aos_uart_get_speed',['../group__aos__uart.html#gaabd322723c273c8e21f33d9dcc83eb57',1,'aos_uart.h']]],
-  ['app_5fble_5fget_5fserver_5fconnection_5fstatus',['APP_BLE_Get_Server_Connection_Status',['../group__aos__ble__core.html#gacb25e6ea5e264adf66242858f599fc4b',1,'aos_ble_core.h']]],
   ['appd_5fenablecpu2',['APPD_EnableCPU2',['../group__app__debug.html#ga8e13b6550bae1951561cc97cb921efc2',1,'app_debug.h']]],
   ['appd_5finit',['APPD_Init',['../group__app__debug.html#gac5b6e827bd8a3ff74ceaf568bc3e1a4f',1,'app_debug.h']]]
 ];

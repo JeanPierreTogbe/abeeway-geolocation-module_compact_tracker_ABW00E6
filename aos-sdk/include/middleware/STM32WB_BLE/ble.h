@@ -47,6 +47,7 @@ extern "C" {
 #include "template_stm.h"
   
 #include "aos_ble_common.h"
+#include "custom_srvc.h"
 #include "svc_ctl.h"
 
 #include "uuid.h"

@@ -27,7 +27,6 @@ extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "ble_common.h"
 #include "ble.h"
 
 
@@ -40,6 +39,9 @@ typedef enum
 } COMSVC_ClientCharConfMask_t;
 
 /* Exported constants --------------------------------------------------------*/
+#define CHARACTERISTIC_DESCRIPTOR_ATTRIBUTE_OFFSET         2
+#define CHARACTERISTIC_VALUE_ATTRIBUTE_OFFSET              1
+
 /* External variables --------------------------------------------------------*/
 /* Exported macros -----------------------------------------------------------*/
 

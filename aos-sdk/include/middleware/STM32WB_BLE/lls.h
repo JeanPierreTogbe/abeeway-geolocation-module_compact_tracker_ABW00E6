@@ -68,16 +68,16 @@ typedef struct {
 /* Exported functions ------------------------------------------------------- */
 
 /*!
- * \fn tBleStatus LLS_Init(void)
+ * \fn tBleStatus lls_init(void)
  *
  * \brief Link Loss service Initialization
  *
  * \return tBleStatus status
  */
-tBleStatus LLS_Init(void);
+tBleStatus lls_init(void);
 
 /*!
- * \fn tBleStatus LLS_Update_Char(uint16_t UUID, uint8_t *pPayload)
+ * \fn tBleStatus lls_update_char(uint16_t uuid, uint8_t *payload)
  *
  * \brief Update the data of the characteristic UUID with pPayload data
  *
@@ -87,16 +87,16 @@ tBleStatus LLS_Init(void);
  *
  * \return tBleStatus status
  */
-tBleStatus LLS_Update_Char(uint16_t UUID, uint8_t *pPayload);
+tBleStatus lls_update_char(uint16_t uuid, uint8_t *payload);
 
 /*!
- * \fn void LLS_App_Notification(BAS_Notification_evt_t * pNotification)
+ * \fn void lls_app_notification(BAS_Notification_evt_t * pNotification)
  *
  * \brief Link Loss service notification function
  *
  * \param pNotification notification event
  */
-void LLS_App_Notification(LLS_App_Notification_evt_t *pNotification);
+void lls_app_notification(LLS_App_Notification_evt_t *pNotification);
 
 
 /*! @}*/

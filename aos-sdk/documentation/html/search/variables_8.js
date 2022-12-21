@@ -12,5 +12,6 @@ var searchData=
   ['irq_5fmode',['irq_mode',['../structaos__gpio__config__t.html#a3f52253dfc6046dac473aa5ff23f8107',1,'aos_gpio_config_t']]],
   ['irq_5fprio',['irq_prio',['../structaos__gpio__config__t.html#a241b06f874a8024cc3f0b269a192e4ad',1,'aos_gpio_config_t']]],
   ['irq_5fservicing',['irq_servicing',['../structaos__gpio__config__t.html#a1b3156daf9d2b49745eb4c2f9d360ebf',1,'aos_gpio_config_t']]],
+  ['is_5fvariable',['is_variable',['../structble__char__init__data__t.html#a0060d3cbb60d02ce5745f43dc8d97b1e',1,'ble_char_init_data_t']]],
   ['isr_5fcb',['isr_cb',['../unionaos__gpio__callback__t.html#a4bb92cc32ac6682527cab28c32b265b1',1,'aos_gpio_callback_t']]]
 ];

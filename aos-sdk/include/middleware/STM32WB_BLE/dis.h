@@ -56,24 +56,24 @@ typedef struct {
 /* Exported functions ------------------------------------------------------- */
 
 /*!
- * \fn void DIS_Init(void)
+ * \fn void dis_init(void)
  *
  * \brief Initialize Device Information Service
  */
-tBleStatus DIS_Init(void);
+tBleStatus dis_init(void);
 
 /*!
- * \fn tBleStatus DIS_Update_Char(uint16_t uuid, DIS_Data_t *p_data)
+ * \fn tBleStatus dis_update_char(uint16_t uuid, DIS_Data_t *data)
  *
  * \brief Update DIS characteristic
  *
  * \param uuid Characteristic to update UUID
  *
- * \param p_data Pointer to the data
+ * \param data Pointer to the data
  *
  * \return result status
  */
-tBleStatus DIS_Update_Char(uint16_t uuid, DIS_Data_t *p_data);
+tBleStatus dis_update_char(uint16_t uuid, DIS_Data_t *data);
 
 /*! @}*/
 #ifdef __cplusplus

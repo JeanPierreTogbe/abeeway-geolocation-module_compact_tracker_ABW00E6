@@ -44,16 +44,16 @@ extern "C"
 /* Exported functions ------------------------------------------------------- */
 
 /*!
- * \fn tBleStatus TPS_Init(void)
+ * \fn tBleStatus tps_init(void)
  *
  * \brief TX power service Initialization
  *
  * \return tBleStatus status
  */
-tBleStatus TPS_Init(void);
+tBleStatus tps_init(void);
 
 /*!
- * \fn tBleStatus TPS_Update_Char(uint16_t UUID, uint8_t *pPayload)
+ * \fn tBleStatus tps_update_char(uint16_t uuid, uint8_t *payload)
  *
  * \brief Update the data of the characteristic UUID with pPayload data
  *
@@ -63,7 +63,7 @@ tBleStatus TPS_Init(void);
  *
  * \return tBleStatus status
  */
-tBleStatus TPS_Update_Char(uint16_t UUID, uint8_t *pPayload);
+tBleStatus tps_update_char(uint16_t uuid, uint8_t *payload);
 
 /*! @}*/
 #ifdef __cplusplus

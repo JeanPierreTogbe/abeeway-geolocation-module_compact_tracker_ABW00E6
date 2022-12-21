@@ -70,26 +70,26 @@ typedef struct {
 /* Exported functions ------------------------------------------------------- */
 
 /*!
- * \fn tBleStatus BAS_Init(void)
+ * \fn tBleStatus bas_init(void)
  *
  * \brief Battery service Initialization
  *
  * \return tBleStatus status
  */
-tBleStatus BAS_Init(void);
+tBleStatus bas_init(void);
 
 /*!
- * \fn tBleStatus BAS_Update_Char(uint16_t UUID, uint8_t *pPayload)
+ * \fn tBleStatus bas_update_char(uint16_t uuid, uint8_t *payload)
  *
- * \brief Update the data of the characteristic UUID with pPayload data
+ * \brief Update the data of the characteristic uuid with payload data
  *
- * \param UUID battery characteristic to update
+ * \param uuid battery characteristic to update
  *
- * \param pPayload data to update
+ * \param payload data to update
  *
  * \return tBleStatus status
  */
-tBleStatus BAS_Update_Char(uint16_t UUID, uint8_t *pPayload);
+tBleStatus bas_update_char(uint16_t uuid, uint8_t *payload);
 
 /*!
  * \fn void BAS_Notification(BAS_Notification_evt_t * pNotification)
@@ -98,7 +98,7 @@ tBleStatus BAS_Update_Char(uint16_t UUID, uint8_t *pPayload);
  *
  * \param pNotification notification event
  */
-void BAS_Notification(BAS_Notification_evt_t * pNotification);
+void bas_app_notification(BAS_Notification_evt_t * pNotification);
 
 /*! @}*/
 #ifdef __cplusplus

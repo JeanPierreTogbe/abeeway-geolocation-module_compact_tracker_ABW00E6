@@ -465,3 +465,30 @@ java.lang.Exception: The project description file (.project) for 'app-cmty_demo'
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-12-21 10:58:25.577
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-12-21 11:48:05.466 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-12-21 11:48:22.412
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-12-21 11:48:22.485
+!MESSAGE Log4j initialized with config file /home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-12-21 11:48:28.475
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-21 11:49:57.005
+!MESSAGE Indexed 'app-cmty_ble-geoloc' (18 sources, 205 headers) in 5.9 sec: 18,491 declarations; 38,268 references; 2 unresolved inclusions; 1,315 syntax errors; 61 unresolved names (0.11%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-21 11:50:00.015
+!MESSAGE Indexed 'app-abw-demo' (11 sources, 196 headers) in 3.01 sec: 18,297 declarations; 38,861 references; 3 unresolved inclusions; 1 syntax errors; 52 unresolved names (0.091%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-21 11:50:02.444
+!MESSAGE Indexed 'app-cmty_cli' (12 sources, 195 headers) in 2.43 sec: 18,290 declarations; 38,904 references; 3 unresolved inclusions; 1 syntax errors; 52 unresolved names (0.091%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-21 11:50:04.665
+!MESSAGE Indexed 'app-cmty_demo' (12 sources, 195 headers) in 2.22 sec: 18,305 declarations; 38,949 references; 3 unresolved inclusions; 1 syntax errors; 52 unresolved names (0.091%)

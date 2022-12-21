@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iasapp_5finit',['IASAPP_Init',['../group__aos__ble__services.html#ga9c3fb31891b9d74b790e2b31dcdb68a2',1,'aos_ble_services.h']]]
+  ['ias_5fchar_5fvalue_5finit',['ias_char_value_init',['../group__aos__ble__services.html#gacd4c5020663de1a5641a4ea45640454a',1,'aos_ble_services.h']]]
 ];

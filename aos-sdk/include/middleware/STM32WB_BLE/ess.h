@@ -51,16 +51,6 @@ typedef enum {
 } ESS_Opcode_evt_t;
 
 /*!
- * \struct ESS_Data_t
- *
- * \brief Data to update to the ESS characteristics
- */
-typedef struct {
-	uint8_t *pPayload;  //!< Characteristic data
-	uint8_t Length;     //!< Characteristic data length
-} ESS_Data_t;
-
-/*!
  * \struct ESS_App_Notification_evt_t
  *
  * \brief Environmental sensing service event struct
@@ -76,25 +66,25 @@ typedef struct {
 /* Exported functions ------------------------------------------------------- */
 
 /*!
- * \fn tBleStatus ESS_Init(void)
+ * \fn tBleStatus ess_init(void)
  *
  * \brief Environmental sensing service Initialization
  *
  * \return tBleStatus status
  */
-tBleStatus ESS_Init(void);
+tBleStatus ess_init(void);
 
 /*!
- * \fn void ESS_Notification(BAS_Notification_evt_t * pNotification)
+ * \fn void ess_app_notification(BAS_Notification_evt_t * pNotification)
  *
  * \brief Environmental sensing service notification function
  *
  * \param pNotification notification event code
  */
-void ESS_Notification(ESS_App_Notification_evt_t *pNotification);
+void ess_app_notification(ESS_App_Notification_evt_t *pNotification);
 
 /*!
- * \fn tBleStatus ESS_Update_Char(uint16_t UUID, uint8_t *pPayload)
+ * \fn tBleStatus ess_udate_char(uint16_t uuid, uint8_t *payload)
  *
  * \brief Update the data of the characteristic UUID with pPayload data
  *
@@ -104,7 +94,7 @@ void ESS_Notification(ESS_App_Notification_evt_t *pNotification);
  *
  * \return tBleStatus status
  */
-tBleStatus ESS_Update_Char(uint16_t UUID, uint8_t *pPayload);
+tBleStatus ess_udate_char(uint16_t uuid, uint8_t *payload);
 
 
 /*! @}*/
