@@ -1,0 +1,50 @@
+12:11:55 **** Incremental Build of configuration Debug for project app-abw-demo ****
+make -j4 all 
+arm-none-eabi-gcc "../src/LmHandlerMsgDisplay.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DABEEWAY=1 -DUSE_HAL_DRIVER -DSTM32WB55xx -DREGION_EU868 -DREGION_US915 -DUSE_FULL_LL_DRIVER -DREGION_RU864 -DREGION_AS923 -DREGION_AU915 -DREGION_KR920 -DREGION_IN865 -DSTM32 -DSTM32WB55VGYx -DSTM32WB -c -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/apps/abeeway/app-abw-demo/src" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/FreeRTOS" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/LoRaWAN" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/STM32WB_BLE" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/STM32WB_HAL" -O0 -ffunction-sections -fdata-sections -Wall -Werror -Wmissing-include-dirs -fstack-usage -MMD -MP -MF"src/LmHandlerMsgDisplay.d" -MT"src/LmHandlerMsgDisplay.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "src/LmHandlerMsgDisplay.o"
+arm-none-eabi-gcc "../src/cli-cmd-ble.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DABEEWAY=1 -DUSE_HAL_DRIVER -DSTM32WB55xx -DREGION_EU868 -DREGION_US915 -DUSE_FULL_LL_DRIVER -DREGION_RU864 -DREGION_AS923 -DREGION_AU915 -DREGION_KR920 -DREGION_IN865 -DSTM32 -DSTM32WB55VGYx -DSTM32WB -c -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/apps/abeeway/app-abw-demo/src" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/FreeRTOS" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/LoRaWAN" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/STM32WB_BLE" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/STM32WB_HAL" -O0 -ffunction-sections -fdata-sections -Wall -Werror -Wmissing-include-dirs -fstack-usage -MMD -MP -MF"src/cli-cmd-ble.d" -MT"src/cli-cmd-ble.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "src/cli-cmd-ble.o"
+arm-none-eabi-gcc "../src/cli-cmd-gnss.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DABEEWAY=1 -DUSE_HAL_DRIVER -DSTM32WB55xx -DREGION_EU868 -DREGION_US915 -DUSE_FULL_LL_DRIVER -DREGION_RU864 -DREGION_AS923 -DREGION_AU915 -DREGION_KR920 -DREGION_IN865 -DSTM32 -DSTM32WB55VGYx -DSTM32WB -c -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/apps/abeeway/app-abw-demo/src" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/FreeRTOS" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/LoRaWAN" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/STM32WB_BLE" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/STM32WB_HAL" -O0 -ffunction-sections -fdata-sections -Wall -Werror -Wmissing-include-dirs -fstack-usage -MMD -MP -MF"src/cli-cmd-gnss.d" -MT"src/cli-cmd-gnss.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "src/cli-cmd-gnss.o"
+arm-none-eabi-gcc "../src/cli-cmd-lora-settings.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DABEEWAY=1 -DUSE_HAL_DRIVER -DSTM32WB55xx -DREGION_EU868 -DREGION_US915 -DUSE_FULL_LL_DRIVER -DREGION_RU864 -DREGION_AS923 -DREGION_AU915 -DREGION_KR920 -DREGION_IN865 -DSTM32 -DSTM32WB55VGYx -DSTM32WB -c -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/apps/abeeway/app-abw-demo/src" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/FreeRTOS" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/LoRaWAN" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/STM32WB_BLE" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/STM32WB_HAL" -O0 -ffunction-sections -fdata-sections -Wall -Werror -Wmissing-include-dirs -fstack-usage -MMD -MP -MF"src/cli-cmd-lora-settings.d" -MT"src/cli-cmd-lora-settings.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "src/cli-cmd-lora-settings.o"
+../src/LmHandlerMsgDisplay.c: In function '_mlme_type_name':
+../src/LmHandlerMsgDisplay.c:190:2: error: enumeration value 'MLME_REJOIN_2' not handled in switch [-Werror=switch]
+  190 |  switch(type) {
+      |  ^~~~~~
+../src/LmHandlerMsgDisplay.c: In function 'DisplayTxUpdate':
+../src/LmHandlerMsgDisplay.c:300:18: error: 'LORAMAC_REGION_AS923' undeclared (first use in this function); did you mean 'LORAMAC_REGION_AS923_4'?
+  300 |             case LORAMAC_REGION_AS923:
+      |                  ^~~~~~~~~~~~~~~~~~~~
+      |                  LORAMAC_REGION_AS923_4
+../src/LmHandlerMsgDisplay.c:300:18: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+make: *** [src/subdir.mk:49: src/LmHandlerMsgDisplay.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/cli-cmd-gnss.c: In function '_gnss_event_cb':
+../src/cli-cmd-gnss.c:546:84: error: 'aos_gnss_event_info_t' has no member named 'req_status'
+  546 |   cli_printf("GNSS callback. Request status: %s.\n", _gnss_request_status_name(info->req_status));
+      |                                                                                    ^~
+make: *** [src/subdir.mk:49: src/cli-cmd-gnss.o] Error 1
+../src/cli-cmd-lora-settings.c:31:14: error: 'srv_provisioning_mac_region_as923' undeclared here (not in a function); did you mean 'srv_provisioning_mac_region_as923_4'?
+   31 |   { "AS923", srv_provisioning_mac_region_as923 },
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |              srv_provisioning_mac_region_as923_4
+make: *** [src/subdir.mk:49: src/cli-cmd-lora-settings.o] Error 1
+../src/cli-cmd-ble.c: In function '_cmd_ble_address':
+../src/cli-cmd-ble.c:610:12: error: implicit declaration of function 'BleGetBdAddress' [-Werror=implicit-function-declaration]
+  610 |  bd_addr = BleGetBdAddress();
+      |            ^~~~~~~~~~~~~~~
+../src/cli-cmd-ble.c:610:10: error: assignment to 'const uint8_t *' {aka 'const unsigned char *'} from 'int' makes pointer from integer without a cast [-Werror=int-conversion]
+  610 |  bd_addr = BleGetBdAddress();
+      |          ^
+../src/cli-cmd-ble.c: In function '_cmd_ble_open':
+../src/cli-cmd-ble.c:698:2: error: implicit declaration of function 'aos_dis_set_dev_eui' [-Werror=implicit-function-declaration]
+  698 |  aos_dis_set_dev_eui(deveui);
+      |  ^~~~~~~~~~~~~~~~~~~
+../src/cli-cmd-ble.c:700:2: error: implicit declaration of function 'APP_BLE_Init'; did you mean 'TL_BLE_Init'? [-Werror=implicit-function-declaration]
+  700 |  APP_BLE_Init(cli_ble_ctx.ble_role);
+      |  ^~~~~~~~~~~~
+      |  TL_BLE_Init
+cc1: all warnings being treated as errors
+make: *** [src/subdir.mk:49: src/cli-cmd-ble.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+12:11:56 Build Failed. 13 errors, 0 warnings. (took 1s.132ms)
+

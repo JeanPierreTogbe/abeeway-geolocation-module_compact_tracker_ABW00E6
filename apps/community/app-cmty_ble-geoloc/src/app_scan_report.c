@@ -49,7 +49,7 @@
 #include "srv_ble_beaconing.h"
 #include "srv_provisioning.h"
 
-
+#include "halleffect_handler.h"
 
 // General definitions
 #define APP_MAIN_LED_PERIOD			1000	//!< Main LED blink period in ms
@@ -64,6 +64,7 @@
 typedef struct {
 	srv_ble_scan_param_t* ble_param; // variable of the BLE scan parameter setting
 	bool button_ack;
+	bool halleffect_ack;
 	TimerHandle_t timer_handle;
 	StaticTimer_t timer_local_data;
 	UBaseType_t timer_count;
@@ -117,6 +118,26 @@ void on_rx_data( LmHandlerAppData_t *appData, LmHandlerRxParams_t *params)
 	}
 }
 
+void on_halleffect(uint8_t user_id, void *arg)
+{
+#if 1
+
+	uint16_t value;
+	aos_gpio_read(aos_gpio_id_7, &value);
+	cli_printf("value :%d\n", value);
+#else
+
+
+		if (_ctx.halleffect_ack){
+			cli_printf("\n Module unhooked ");
+		} else {
+			cli_printf("\n Module hooked ");
+		}
+		_ctx.halleffect_ack = !	_ctx.halleffect_ack;
+
+#endif
+}
+
 
 void on_button_4_press(uint8_t user_id, void *arg)
 {
@@ -168,12 +189,18 @@ static void _led1_blink_timeout( TimerHandle_t xTimer )
 void application_task(void *argument)
 {
 	uint32_t value;
+	//uint16_t* halleffect_value;
+
 	bool valid;
 
 	aos_log_msg(aos_log_module_app, aos_log_level_status, true, "Starting application thread\n");
 	// Initiating LoRaMAC Handler service
 	aos_log_msg(aos_log_module_app, aos_log_level_status, true, "Initiating LoRaMAC Handler service\n");
 	srv_lmh_open(on_rx_data);
+
+	//Hall effect configuration on gpio7
+	halleffect_handler_config(aos_gpio_id_7, on_halleffect);
+
 	// Button (Board switch 04) configuration
 	btn_handling_config(/*aos_gpio_id_7*/aos_gpio_id_9, on_button_4_press);
 	//Button (Board switch 05) configuration

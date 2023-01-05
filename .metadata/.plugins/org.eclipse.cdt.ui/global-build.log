@@ -1,21 +1,14 @@
-17:37:23 **** Incremental Build of configuration Debug for project app-cmty_ble-geoloc ****
+09:44:32 **** Incremental Build of configuration Debug for project app-cmty_ble-geoloc ****
 make -j4 all 
-arm-none-eabi-gcc "../src/app_scan_report.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DABEEWAY=1 -DUSE_HAL_DRIVER -DSTM32WB55xx -DREGION_EU868 -DREGION_US915 -DUSE_FULL_LL_DRIVER -DREGION_RU864 -DREGION_AS923 -DREGION_AU915 -DREGION_KR920 -DREGION_IN865 -DSTM32 -DSTM32WB55VGYx -DSTM32WB -c -I"C:/Users/Jean-PierreTogbe/STM32CubeIDE/workspace_1.10.1/abeeway-geolocation-module/apps/community/app-cmty_ble-geoloc/src" -I"C:/Users/Jean-PierreTogbe/STM32CubeIDE/workspace_1.10.1/abeeway-geolocation-module/aos-sdk/include" -I"C:/Users/Jean-PierreTogbe/STM32CubeIDE/workspace_1.10.1/abeeway-geolocation-module/aos-sdk/include/middleware/FreeRTOS" -I"C:/Users/Jean-PierreTogbe/STM32CubeIDE/workspace_1.10.1/abeeway-geolocation-module/aos-sdk/include/middleware/LoRaWAN" -I"C:/Users/Jean-PierreTogbe/STM32CubeIDE/workspace_1.10.1/abeeway-geolocation-module/aos-sdk/include/middleware/STM32WB_BLE" -I"C:/Users/Jean-PierreTogbe/STM32CubeIDE/workspace_1.10.1/abeeway-geolocation-module/aos-sdk/include/middleware/STM32WB_HAL" -O0 -ffunction-sections -fdata-sections -Wall -Werror -Wmissing-include-dirs -fstack-usage -MMD -MP -MF"src/app_scan_report.d" -MT"src/app_scan_report.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "src/app_scan_report.o"
-arm-none-eabi-gcc -o "app-cmty_ble-geoloc.elf" @"objects.list"  -Wl,--start-group -laos-core -laos-services -laos-boards-EVK_ES2 -Wl,--end-group -mcpu=cortex-m4 -T"C:\Users\Jean-PierreTogbe\STM32CubeIDE\workspace_1.10.1\abeeway-geolocation-module\aos-sdk\Release\ld-scripts\STM32WB55VGYX_FLASH.ld" --specs=nosys.specs -Wl,-Map="app-cmty_ble-geoloc.map" -Wl,--gc-sections -static -L"C:\Users\Jean-PierreTogbe\STM32CubeIDE\workspace_1.10.1\abeeway-geolocation-module\aos-sdk\Release\lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+arm-none-eabi-gcc "../src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DABEEWAY=1 -DUSE_HAL_DRIVER -DSTM32WB55xx -DREGION_EU868 -DREGION_US915 -DUSE_FULL_LL_DRIVER -DREGION_RU864 -DREGION_AS923 -DREGION_AU915 -DREGION_KR920 -DREGION_IN865 -DSTM32 -DSTM32WB55VGYx -DSTM32WB -c -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/apps/community/app-cmty_ble-geoloc/src" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/FreeRTOS" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/LoRaWAN" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/STM32WB_BLE" -I"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/include/middleware/STM32WB_HAL" -O0 -ffunction-sections -fdata-sections -Wall -Werror -Wmissing-include-dirs -fstack-usage -MMD -MP -MF"src/main.d" -MT"src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "src/main.o"
+arm-none-eabi-gcc -o "app-cmty_ble-geoloc.elf" @"objects.list"  -Wl,--start-group -laos-core -laos-services -laos-boards-EVK_ES2 -Wl,--end-group -mcpu=cortex-m4 -T"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/Release/ld-scripts/STM32WB55VGYX_FLASH.ld" --specs=nosys.specs -Wl,-Map="app-cmty_ble-geoloc.map" -Wl,--gc-sections -static -L"/home/jptogbe/STM32CubeIDE/abeeway-geolocation-module_compact_tracker_ABW00E6/aos-sdk/Release/lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: app-cmty_ble-geoloc.elf
  
 arm-none-eabi-size   app-cmty_ble-geoloc.elf 
 arm-none-eabi-objdump -h -S  app-cmty_ble-geoloc.elf  > "app-cmty_ble-geoloc.list"
    text	   data	    bss	    dec	    hex	filename
- 225252	  11245	 114127	 350624	  559a0	app-cmty_ble-geoloc.elf
+ 242836	  11283	 114887	 369006	  5a16e	app-cmty_ble-geoloc.elf
 Finished building: default.size.stdout
  
 Finished building: app-cmty_ble-geoloc.list
- 
-17:37:30 **** Incremental Build of configuration Debug for project app-cmty_ble-geoloc ****
-make -j4 all 
-arm-none-eabi-size   app-cmty_ble-geoloc.elf 
-   text	   data	    bss	    dec	    hex	filename
- 225252	  11245	 114127	 350624	  559a0	app-cmty_ble-geoloc.elf
-Finished building: default.size.stdout
  
