@@ -15,6 +15,7 @@
 #include "aos_system.h"
 #include "aos_ble_core.h"
 #include "aos_log.h"
+#include "aos_i2c.h"
 
 #include "FreeRTOS.h"
 
@@ -33,6 +34,8 @@ static StackType_t _app_task_stack[APP_TASK_STACK_SIZE];
 // CLI definitions
 #define SRV_CLI_UART_TX_BUFFER 1024
 #define SRV_CLI_UART_RX_BUFFER 1024
+
+
 
 static uint8_t _srv_cli_tx_buffer[SRV_CLI_UART_TX_BUFFER];
 static uint8_t _srv_cli_rx_buffer[SRV_CLI_UART_RX_BUFFER];

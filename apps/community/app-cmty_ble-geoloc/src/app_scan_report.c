@@ -118,7 +118,7 @@ void on_rx_data( LmHandlerAppData_t *appData, LmHandlerRxParams_t *params)
 	}
 }
 
-void on_halleffect(uint8_t user_id, void *arg)
+void static _on_halleffect_1(uint8_t user_id, void *arg)
 {
 #if 1
 
@@ -136,6 +136,12 @@ void on_halleffect(uint8_t user_id, void *arg)
 		_ctx.halleffect_ack = !	_ctx.halleffect_ack;
 
 #endif
+}
+
+void static _on_halleffect_2(uint8_t user_id, void *arg){
+	uint16_t value;
+		aos_gpio_read(aos_gpio_id_i2c_int2, &value);
+		cli_printf("value :%d\n", value);
 }
 
 
@@ -199,10 +205,11 @@ void application_task(void *argument)
 	srv_lmh_open(on_rx_data);
 
 	//Hall effect configuration on gpio7
-	halleffect_handler_config(aos_gpio_id_7, on_halleffect);
-
+	halleffect_handler_config(aos_gpio_id_7, _on_halleffect_1);
+	//Hall effect 2 configuration on I2C_INT2
+	halleffect_handler_config(aos_gpio_id_i2c_int2, _on_halleffect_2);
 	// Button (Board switch 04) configuration
-	btn_handling_config(/*aos_gpio_id_7*/aos_gpio_id_9, on_button_4_press);
+	btn_handling_config(aos_gpio_id_9, on_button_4_press);
 	//Button (Board switch 05) configuration
 	btn_handling_config(aos_gpio_id_8, on_button_5_press);
 

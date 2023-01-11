@@ -7,10 +7,13 @@
 #include "aos_log.h"
 #include "aos_board.h"
 #include "aos_system.h"
+#include "aos_i2c.h"
 
 #include "srv_cli.h"
 
 #include "halleffect_handler.h"
+
+
 
 void halleffect_handler_config(aos_gpio_id_t gpio, aos_system_user_callback_t cb)
 {
